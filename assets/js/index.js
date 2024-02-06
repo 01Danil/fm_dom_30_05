@@ -1,28 +1,32 @@
 "use strict";
+// create DB with image квадратная, портретная, альбомная
+const imagesDB = [
+  "https://img.freepik.com/premium-photo/blue-ocean-water-background-digital-illustration-artwork-nature-sea-ocean_743855-10946.jpg",
+  "https://images.nationalgeographic.org/image/upload/v1652341068/EducationHub/photos/ocean-waves.jpg",
+  "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/calm-red-sea-1x1-hannes-cmarits.jpg",
+];
+//create slider
+const slider = new Slider(imagesDB);
+// img
+const image = document.querySelector(".slide>img");
+// prev, next
+const [prevBtn, nextBtn] = document.querySelectorAll(
+  ".slider-container>button"
+);
 
-function logMessager() {
-  alert("message");
+prevBtn.addEventListener("click", () => {
+  console.log(slider.currentIndex);
+  slider.currentIndex = slider.prev();
+  updateView();
+});
+nextBtn.addEventListener("click", () => {
+	console.log(slider.currentIndex);
+  slider.currentIndex = slider.next();
+  updateView();
+});
+
+// установить путь в атрибут src=''
+function updateView() {
+  image.setAttribute("src", slider.currentSlide);
 }
-
-// const [,button] = document.getElementsByTagName("button");
-// button.addEventListener("click", logMessager);
-
-// const id = "unique";
-// const unique = document.getElementById("unique"); //0(1) -константная сложность (лучшая)
-// const unique = document.getElementById(id);
-// unique.addEventListener("click", logMessager);
-
-// const unique = document.querySelector("#unique"); //0(1) - медленее, но больше возможностей CSS свойства
-// const btn = document.querySelector("button:last-of-type");
-
-// const btns1 = document.getElementsByClassName("btn");
-// const btns2 = document.querySelectorAll(".btn");
-
-const img1 = document.querySelector("img");
-const [img] = document.getElementsByTagName("img");
-
-const [, text] = document.getElementsByClassName("text");
-
-const li2 = document.querySelector("li:nth-child(2)");
-
-const ps = document.querySelectorAll("#main p");
+updateView();
