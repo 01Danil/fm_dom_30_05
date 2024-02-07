@@ -14,19 +14,38 @@ const [prevBtn, nextBtn] = document.querySelectorAll(
   ".slider-container>button"
 );
 
-prevBtn.addEventListener("click", () => {
-  console.log(slider.currentIndex);
-  slider.currentIndex = slider.prev();
-  updateView();
-});
-nextBtn.addEventListener("click", () => {
-	console.log(slider.currentIndex);
-  slider.currentIndex = slider.next();
-  updateView();
-});
+const btnSliderHandler =
+  (direction = "next") =>
+  () => {
+    slider.currentIndex =
+      slider[direction === "next" ? "nextIndex" : "prevIndex"];
+    updateView();
+  };
 
-// установить путь в атрибут src=''
+prevBtn.addEventListener("click", btnSliderHandler("prev"));
+nextBtn.addEventListener("click", btnSliderHandler("next"));
+
 function updateView() {
   image.setAttribute("src", slider.currentSlide);
 }
 updateView();
+
+/*----------------------------------------------------------------------------- */
+
+const unique = document.getElementById("unique");
+
+function btnUniqueHandlet(event) {
+  console.log('target:', event.target); // Елемент по которому кликнули
+	console.log('currentTarget:', event.currentTarget); // Елемент чем обработчик обработал
+  // unique.removeEventListener("click", btnUniqueHandlet);
+  // unique.disabled = true;
+}
+
+unique.addEventListener("click", btnUniqueHandlet);
+// unique.dispatchEvent(new MouseEvent("click"));
+
+window.addEventListener("click", btnUniqueHandlet);
+document.addEventListener("click", btnUniqueHandlet);
+document.body.addEventListener("click", btnUniqueHandlet);
+
+window.dispatchEvent(new MouseEvent("click"));

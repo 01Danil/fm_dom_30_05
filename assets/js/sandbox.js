@@ -14,11 +14,11 @@ function createCounter() {
   };
 }
 
-const counter = createCounter(); // let initial = 10;
-console.log(counter.increment());
-console.log(counter.decrement());
+// const counter = createCounter(); // let initial = 10;
+// console.log(counter.increment());
+// console.log(counter.decrement());
 
-const counter2 = createCounter();
+// const counter2 = createCounter();
 
 // function createAdder(n) {
 // let sum = n;
@@ -31,9 +31,9 @@ const counter2 = createCounter();
 //   return (m) => (n += m);
 // }
 
-const createAdder = (n) => (m) => (n += m);
+// const createAdder = (n) => (m) => (n += m);
 
-const adder = createAdder(100);
-console.log(adder(15));
-console.log(adder(50));
-console.log(adder(10));
+// const adder = createAdder(100);
+// console.log(adder(15));
+// console.log(adder(50));
+// console.log(adder(10));
