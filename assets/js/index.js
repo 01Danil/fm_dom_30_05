@@ -34,16 +34,8 @@ updateView();
 
 const unique = document.getElementById("unique");
 
-function btnUniqueHandlet(e) {
-  // e = e || event;
-  e.stopPropagation();
-  console.group();
-  console.log("target:", e.target); // Елемент по которому кликнули
-  console.log("currentTarget:", e.currentTarget); // Елемент чем обработчик обработал
-  console.groupEnd();
+const valAttr = unique.getAttribute("title");
+unique.setAttribute("rel", "relative text");
+if (unique.hasAttribute("title")) {
+  unique.setAttribute("title", valAttr + " title text");
 }
-
-unique.addEventListener("click", btnUniqueHandlet);
-window.addEventListener("click", btnUniqueHandlet);
-document.addEventListener("click", btnUniqueHandlet);
-document.body.addEventListener("click", btnUniqueHandlet);
