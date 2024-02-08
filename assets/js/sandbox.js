@@ -1,39 +1,22 @@
 "use strict";
 
-let i = 123;
+const obj = {
+  prop1: 1,
+  prop2: 2,
+};
 
-function createCounter() {
-  let i = 0;
-  return {
-    increment() {
-      return ++i;
-    },
-    decrement() {
-      return --i;
-    },
-  };
-}
+// const prop = true ? "prop1" : "prop2";
 
-// const counter = createCounter(); // let initial = 10;
-// console.log(counter.increment());
-// console.log(counter.decrement());
+//console.log(obj[prop])
 
-// const counter2 = createCounter();
-
-// function createAdder(n) {
-// let sum = n;
-//   return function adder(m) {
-//     return n += m;
+// function wrap(count = 3) {
+//   let clickCount = 0;
+//   return function thirtClickEvent() {
+//     console.log(++clickCount);
+//     if (clickCount === count) {
+//       unique.removeEventListener("click", thirtClickEvent);
+//       unique.disabled = true;
+//     }
 //   };
 // }
-
-// function createAdder(n) {
-//   return (m) => (n += m);
-// }
-
-// const createAdder = (n) => (m) => (n += m);
-
-// const adder = createAdder(100);
-// console.log(adder(15));
-// console.log(adder(50));
-// console.log(adder(10));
+// unique.addEventListener("click", wrap());
