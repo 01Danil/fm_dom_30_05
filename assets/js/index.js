@@ -35,26 +35,15 @@ updateView();
 const unique = document.getElementById("unique");
 
 function btnUniqueHandlet(e) {
-  e = e || event;
+  // e = e || event;
+  e.stopPropagation();
   console.group();
   console.log("target:", e.target); // Елемент по которому кликнули
   console.log("currentTarget:", e.currentTarget); // Елемент чем обработчик обработал
-  // unique.removeEventListener("click", btnUniqueHandlet);
-  // unique.disabled = true;
-  // console.log("content e.target.innerText:", e.target.innerText);
-  // console.log("content e.target.textContent:", e.target.textContent);
   console.groupEnd();
 }
 
 unique.addEventListener("click", btnUniqueHandlet);
-unique.addEventListener("click", () => {alert(5)}, {
-  capture: true,
-  once: true,
-});
-// unique.dispatchEvent(new MouseEvent("click"));
-
 window.addEventListener("click", btnUniqueHandlet);
 document.addEventListener("click", btnUniqueHandlet);
 document.body.addEventListener("click", btnUniqueHandlet);
-
-// window.dispatchEvent(new MouseEvent("click"));
