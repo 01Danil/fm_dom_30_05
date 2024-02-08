@@ -32,6 +32,7 @@ updateView();
 
 /*----------------------------------------------------------------------------- */
 
+/*
 const btns = document.querySelectorAll("body>button");
 for (const btn of btns) {
   btn.addEventListener("click", ({ target: { dataset }, target }) => {
@@ -41,3 +42,15 @@ for (const btn of btns) {
     target.style.paddingLeft = "1rem";
   });
 }
+*/
+
+const btns = document.querySelectorAll("div>button");
+const container = document.getElementById("container");
+
+const btnHandler = ({ target: { dataset:{color} }, target }) => {
+	container.style.backgroundColor = color;		
+  }
+for (const btn of btns) {
+  btn.addEventListener("click", btnHandler);
+}
+
