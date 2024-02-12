@@ -4,7 +4,7 @@ const actors = [
     name: "Tom Cruise",
     birthdate: "July 3, 1962",
     photo:
-      "https://www.filmibeat.com/img/popcorn/profile_photos/tom-cruise-20190610151455-4602.jpgq",
+      "https://www.filmibeat.com/img/popcorn/profile_photos/tom-cruise-20190610151455-4602.jpg",
   },
   {
     id: 2,
@@ -41,25 +41,25 @@ const actors = [
     photo:
       "https://hairstyles.thehairstyler.com/hairstyle_views/front_view_images/4555/original/Gerard-Butler.jpg",
   },
-  // {
-  //   id: 7,
-  //   name: "Qwert Qwe",
-  //   birthdate: "",
-  //   photo:
-  //     "https://media.wired.com/photos/5bb6accf0abf932caf294b18/master/pass/waves-730260985.jpg",
-  // },
-  // {
-  //   id: 8,
-  //   name: "",
-  //   birthdate: "",
-  //   photo:
-  //     "https://hairstyles.thehairstyler.com/hairstyle_views/front_view_images/4555/original/Gerard-Butler.jpg",
-  // },
-  // {
-  //   id: 9,
-  //   name: "",
-  //   birthdate: "",
-  //   photo:
-  //     "",
-  // },
+  {
+    id: 7,
+    name: "Qwert Qwe",
+    birthdate: "",
+    photo:
+      "https://media.wired.com/photos/5bb6accf0abf932caf294b18/master/pass/waves-730260985.jpg",
+  },
+  {
+    id: 8,
+    name: "",
+    birthdate: "",
+    photo:
+      "https://hairstyles.thehairstyler.com/hairstyle_views/front_view_images/4555/original/Gerard-Butler.jpg",
+  },
+  {
+    id: 9,
+    name: "",
+    birthdate: "",
+    photo:
+      "",
+  },
 ];
