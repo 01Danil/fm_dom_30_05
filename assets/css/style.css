@@ -24,28 +24,28 @@ ul {
   border: 2px solid #ddd;
 }
 .card-container {
-  width: 200px; 
+  width: 200px; /*--------------*/
   display: flex;
   flex-direction: column;
 }
 .card-photo-wrapper {
-  width: inherit; 
-  height: 250px;
-  position: relative;
+  width: inherit; /*--------------*/
+  height: 250px; /*--------------*/
+  position: relative; /*--------------*/
 }
 .card-initials {
-  width: inherit; 
-  height: inherit; 
+  width: inherit; /*--------------*/
+  height: inherit; /*--------------*/
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
   font-size: 4rem;
 }
 .card-photo {
-  width: inherit;
-  height: inherit; 
+  width: inherit; /*--------------*/
+  height: inherit; /*--------------*/
   position: absolute;
   top: 0;
   left: 0;
