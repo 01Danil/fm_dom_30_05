@@ -13,3 +13,17 @@ form.addEventListener("submit", (e) => {
   }
   console.log(message);
 });
+
+// function renderList(data, container) {
+//   data.forEach((item) => {
+//     const listItem = document.createElement("li");
+//     listItem.textContent = item;
+//     container.appendChild(listItem);
+//   });
+// }
+
+// function renderList(data, container) {
+//   container.innerHTML = "";
+//   const listHTML = data.map((item) => `<li>${item}</li>`).join("");
+//   container.innerHTML = listHTML;
+// }
