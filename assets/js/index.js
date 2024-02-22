@@ -1,16 +1,9 @@
 "use strict";
 
-// const promise = fetch('./assets/js/data.json');
-// promise.then((response)=>{
-//   console.log('ok');
-//   const jsonPromise = response.json();
-//   jsonPromise.then((data)=>{
-//     console.table(data)
-//   })
-// });
-
-fetch('./assets/js/data.json')
-  .then((response)=>response.json(), (err)=>{console.log(err)})
-  .then((data)=>{
-    data.forEach((user)=>{console.log(user.name)})
-  }, (err)=>{console.log(err)})
+const myPromise = new Promise(executor);
+function executor(resolve, reject){
+  Math.random()>0.5?resolve('ok'):reject('(((');
+}
+myPromise
+  .then((response)=>{console.log(response)})
+  .catch((error)=>{console.log(error)})
